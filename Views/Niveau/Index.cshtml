@@ -1,0 +1,64 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+    <fieldset class="scheduler-border">
+        <legend class="scheduler-border" id="legend">List Des Niveaux</legend>
+        <table class="table">
+            <thead>
+                <tr>
+
+                    <th>
+                        Code
+                    </th>
+                    <th>
+                        IntituleFr
+                    </th>
+                    <th>
+                        CodeFiliere
+                    </th>
+                    <th> 
+                        IntituleAbrege
+                    </th>
+                    <th> 
+                        AnneeNiveau
+                    </th>
+
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in @ViewBag.ListNiveaux)
+                {
+                <tr>
+
+                    <td>
+                        @item.Code
+                    </td>
+                    <td>
+                        @item.IntituleFr
+                    </td>
+                    <td>
+                        @item.CodeFiliere
+                    </td>
+                    <td>
+                        @item.IntituleAbrege
+                    </td>
+                    <td>
+                        @item.AnneeNiveau
+                    </td>
+
+
+                </tr>
+
+                }
+            </tbody>
+        </table>
+    </fieldset>
+</body>
+</html>

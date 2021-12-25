@@ -1,0 +1,83 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+    <fieldset class="scheduler-border">
+        <legend class="scheduler-border" id="legend">List Des Unité</legend>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        ID
+                    </th>
+                    <th>
+                        Code
+                    </th>
+                    <th>
+                        CodeFiliere
+                    </th>
+                    <th>
+                        CodeParcours
+                    </th>
+                    <th>
+                        CodeNiveau
+                    </th>
+                    <th>
+                        Periode
+                    </th>
+                    <th>
+                        IntituleFr
+                    </th>
+                    <th>
+                        Nature
+                    </th>
+
+
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in @ViewBag.ListUniteEnseignement)
+                {
+                    <tr>
+                        <td>
+                            @item.Id
+                        </td>
+                        <td>
+                            @item.Code
+                        </td>
+                       
+                        <td>
+                            @item.CodeFiliere
+                        </td>
+                        <td>
+                            @item.CodeParcours
+
+                        </td>
+                        <td>
+                            @item.CodeNiveau
+                        </td>
+
+                        <td>
+                            @item.Periode
+                        </td>
+                        <td>
+                            @item.IntituleFr
+                        </td>
+                        <td>
+                            @item.Nature
+                        </td>
+                    </tr>
+
+                }
+            </tbody>
+        </table>
+    </fieldset>
+</body>
+</html>
