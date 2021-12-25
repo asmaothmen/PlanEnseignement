@@ -1,0 +1,80 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<link href="~/Content/bootstrap.css" rel="stylesheet" />
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+
+</head>
+<body>
+   
+    <fieldset class="scheduler-border">
+        <legend class="scheduler-border" id="legend">List Des Filieres</legend>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        Code
+                    </th>
+                    <th>
+                        CodeTypeDiplome
+                    </th>
+                    <th>
+                        CodeDepartementTutelle
+                    </th>
+                    <th>
+                        CodeTypePeriodeEnseignement
+                    </th>
+                    <th>
+                        IntituleFr
+                    </th>
+                    <th>IntituleAr </th>
+                    <th>IntituleAbrege</th>
+                    <th>Domaine</th>
+                    <th>Mention</th>
+                    <th>PeriodeHabilitation</th>
+                    <th>NombrePeriodes</th>
+                    <th>NombreNiveaux </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in @ViewBag.ListFiliere)
+                {
+                <tr>
+                    <td>
+                        @item.Code
+                    </td>
+                    <td>
+                        @item.CodeTypeDiplome
+                    </td>
+                    <td>
+                        @item.CodeDepartementTutelle
+                    </td>
+                    <td>
+                        @item.CodeTypePeriodeEnseignement
+
+                    </td>
+                    <td>
+                        @item.IntituleFr
+                    </td>
+                    <td>@item.IntituleAr </td>
+                    <td>@item.IntituleAbrege</td>
+                    <td>@item.Domaine</td>
+                    <td>@item.Mention</td>
+                    <td>@item.PeriodeHabilitation</td>
+                    <td>@item.NombrePeriodes</td>
+                    <td>@item.NombreNiveaux </td>
+                </tr>
+
+                }
+            </tbody>
+        </table>
+    </fieldset>
+</body>
+</html>

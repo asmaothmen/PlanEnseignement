@@ -1,0 +1,142 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+    <fieldset class="scheduler-border">
+        <legend class="scheduler-border" id="legend">List Des Modules</legend>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        ID
+                    </th>
+                    <th>
+                        Code
+                    </th>
+                    <th>
+                        IdUniteEnseignement
+                    </th>
+                    <th>
+                        CodeFiliere
+                    </th>
+                    <th>
+                        CodeParcours
+                    </th>
+                    <th>
+                        CodeNiveau
+                    </th>
+                    <th>
+                        Periode
+                    </th>
+                    <th>
+                        IntituleFr
+                    </th>
+
+                    <th>
+                        IntituleAbrege
+                    </th>
+                    <th>
+                        Credits
+                    </th>
+                    <th>
+                        Coefficients
+                    </th>
+                    <th>
+                        UniteVolumeHoraire
+                    </th>
+                    <th>
+                        VolumeCours
+                    </th>
+                    <th>
+                        VolumeTd
+                    </th>
+                    <th>
+                        VolumeTp
+                    </th>
+                    <th>
+                        VolumeCi
+                    </th>
+                    <th>
+                        VolumeTutorat
+                    </th>
+                    <th>
+                        RegimeExamen
+                    </th>
+                   
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in @ViewBag.ListModules)
+                {
+                <tr>
+                    <td>
+                        @item.Id
+                    </td>
+                    <td>
+                        @item.Code
+                    </td>
+                    <td>
+                        @item.IdUniteEnseignement
+                    </td>
+                    <td>
+                        @item.CodeFiliere
+                    </td>
+                    <td>
+                        @item.CodeParcours
+
+                    </td>
+                    <td>
+                        @item.CodeNiveau
+                    </td>
+                   
+                    <td>
+                        @item.Periode
+                    </td>
+                    <td>
+                        @item.IntituleFr
+                    </td>
+
+                    <td>
+                        @item.IntituleAbrege
+                    </td>
+                    <td>
+                        @item.Credits
+                    </td>
+                    <td>
+                        @item.Coefficients
+                    </td>
+                    <td>
+                        @item.UniteVolumeHoraire
+                    </td>
+                    <td>
+                        @item.VolumeCours
+                    </td>
+                    <td>
+                        @item.VolumeTd
+                    </td>
+                    <td>
+                        @item.VolumeTp
+                    </td>
+                    <td>
+                        @item.VolumeCi
+                    </td>
+                    <td>
+                        @item.VolumeTutorat
+                    </td>
+                    <td>
+                        @item.RegimeExamen
+                    </td>
+                </tr>
+
+                }
+            </tbody>
+        </table>
+    </fieldset>
+</body>
+</html>
